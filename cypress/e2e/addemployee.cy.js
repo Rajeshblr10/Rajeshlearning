@@ -68,7 +68,7 @@ it('verify add employee', () => {
     cy.get(addemployee.savebtn()).click()
   }); 
 
-it.only('Verify confirm password is reqquired field in add employee', () => {
+it('Verify confirm password is reqquired field in add employee', () => {
     cy.visit('/');
 
     // Enter login credentials and click login button
@@ -118,6 +118,30 @@ it.only('Verify confirm password is reqquired field in add employee', () => {
     cy.get(addemployee.confirmpassword()).type(data.confirmpassword)
     cy.get(addemployee.savebtn()).click()
   }); 
+  it.only('verify a weak password', () => {
+    cy.visit('/');
+
+    // Enter login credentials and click login button
+    cy.xpath(login.usernameInput()).type(data.username);
+    cy.xpath(login.passwordInput()).type(data.userpassword);
+    cy.get(login.loginButton()).click();
+    // Verify that login is successful
+    cy.url("eq", "/web/index.php/dashboard/index").should('include', '/dashboard');
+    cy.contains("PIM").click()
+    cy.contains("Add Employee").click()
+    //const d = new Date();
+    //var fname = data.firstname + "_" + d.getTime()
+    let r = (Math.random() + 1).toString(36).substring(7);
+    cy.get(addemployee.Firstname()).type("rajesh"+r)
+    cy.get(addemployee.Lastname()).type(data.lastname)
+    cy.get(addemployee.switchbtn()).click();
+    cy.get(addemployee.username()).type("rajesh"+r) 
+    cy.get(addemployee.password()).type ("rajesh")
+    cy.contains("Should have at least 7 characters").should("be.visible")
+    cy.get(addemployee.confirmpassword()).type(data.password)
+    //cy.get(addemployee.savebtn()).click()
+    
+  });
 
 });
 
