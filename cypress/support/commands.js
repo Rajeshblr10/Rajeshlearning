@@ -26,7 +26,7 @@
 require('cypress-downloadfile/lib/downloadFileCommand')
 
 
-
+import 'cypress-file-upload';
 Cypress.Commands.add('Empoloymentstatus', () => {
 
     cy.contains("Employment Status").click();

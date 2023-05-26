@@ -158,14 +158,9 @@ it('Verify confirm password is reqquired field in add employee', () => {
       let r = (Math.random() + 1).toString(36).substring(7);
       cy.get(addemployee.Firstname()).type("rajesh"+r)
       cy.get(addemployee.Lastname()).type(data.lastname)
-      cy.fileupload('[class="employee-image"]','module1/test4.txt')
-    })
-     // cy.get('[class="employee-image"]').
-      //cy.get(addemployee.switchbtn()).click();
-      //cy.xpath(addemployee.username()).type("Admin"+r) 
-      //cy.xpath(addemployee.password()).type("rajesh")
-      //cy.contains("Should have at least 7 characters").should("be.visible")
-      //cy.get(addemployee.confirmpassword()).type(data.password)
+      cy.get('input[class="oxd-file-input"]').attachFile("module1/peacock.png")
+      //cy.fileupload("//input[@name='upfile']",'module1/test4.txt')
+    });
      
   });
 

@@ -1,6 +1,6 @@
-import manjushree from '../fixtures/addempoloyee.json'
-import login from '../pageobjects/loginpage.po'
-import addjob from '../pageobjects/addjob.po'
+import manjushree from '../../fixtures/addempoloyee.json'
+import login from '../../pageobjects/loginpage.po'
+import addjob from '../../pageobjects/addjob.po'
 describe('Add shift time', () => {
 
     it('Logs in and adds a shift Status', () => {
