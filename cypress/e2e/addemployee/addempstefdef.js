@@ -4,8 +4,10 @@ import login from '../../pageobjects/loginpage.po'
 import data from '../../fixtures/addempoloyee.json'
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
 
-Given('launch urlWhen enter all the deatails', () => {
+Given('launching url', () => {
     cy.visit("/")
+})
+When('enter all mandetary deatails and click login btn', () => {    
     cy.xpath(login.usernameInput()).type(data.username);
     cy.xpath(login.passwordInput()).type(data.userpassword);
     cy.get(login.loginButton()).click();
@@ -25,7 +27,7 @@ When('click on Add Employee sub module', () => {
 When('enter employee first name last name', () => {
 
     let r = (Math.random() + 1).toString(36).substring(7);
-    cy.xpath(addemployee.Firstname()).type("rajesh" + r)
+    cy.get(addemployee.Firstname()).type("rajesh" + r)
     cy.get(addemployee.Lastname()).type(data.lastname)
 
 })

@@ -3,8 +3,8 @@ Feature: Add employee functionality
 
 Scenario: Verify Add employeee with valid creds
 
-Given launch urlWhen enter all the deatails
-
+Given launching url
+When enter all mandetary deatails and click login btn
 Then user going to dashboard
 When navigate PIM module
 And click on Add Employee sub module
