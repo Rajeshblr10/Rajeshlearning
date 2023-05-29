@@ -7,8 +7,8 @@ describe('Add shift time', () => {
         cy.visit('/');
 
         // Enter login credentials and click login button
-        cy.xpath(login.usernameInput()).type(manjushree.username);
-        cy.xpath(login.passwordInput()).type(manjushree.userpassword);
+       // cy.xpath(login.usernameInput()).type(manjushree.username);
+       // cy.xpath(login.passwordInput()).type(manjushree.userpassword);
         cy.get(login.loginButton()).click();
 
         // Verify that login is successful

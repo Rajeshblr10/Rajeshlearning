@@ -19,7 +19,7 @@ describe('Add work shift in job', () => {
        // cy.get('span[class="oxd-topbar-body-nav-tab-item"]').eq(1).click();
         cy.contains("Job").click()
        
-        
+        //type somting
         cy.contains("Work Shifts").click();
 
         cy.get('button[class="oxd-button oxd-button--medium oxd-button--secondary"]').click()
