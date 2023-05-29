@@ -14,14 +14,14 @@ describe('Add shift time', () => {
         // Verify that login is successful
          cy.url("eq", "/web/index.php/dashboard/index").should('include', '/dashboard');
 
-        cy.contains("Admin").click()
+       // cy.contains("Admin").click()
 
-       cy.get('span[class="oxd-topbar-body-nav-tab-item"]').eq(1).click();
+       // cy.get('span[class="oxd-topbar-body-nav-tab-item"]').eq(1).click();
         
-       cy.contains("Job ").click()
-      
+       d.getTime()  
+
 
       cy.Empoloymentstatus()
     
     })
-});
+})
