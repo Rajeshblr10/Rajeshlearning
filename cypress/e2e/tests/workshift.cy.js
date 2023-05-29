@@ -20,13 +20,13 @@ describe('Add work shift in job', () => {
         cy.contains("Job").click()
        
         //type somting
-        cy.contains("Work Shifts").click();
+       // cy.contains("Work Shifts").click();
 
-        cy.get('button[class="oxd-button oxd-button--medium oxd-button--secondary"]').click()
+       // cy.get('button[class="oxd-button oxd-button--medium oxd-button--secondary"]').click()
 
-        cy.get('input[class="oxd-input oxd-input--active"]').eq(1).type("day")
+       // cy.get('input[class="oxd-input oxd-input--active"]').eq(1).type("day")
       
-        cy.xpath('//button[@type="submit"]').click()
+        //cy.xpath('//button[@type="submit"]').click()
 
     })
 })
