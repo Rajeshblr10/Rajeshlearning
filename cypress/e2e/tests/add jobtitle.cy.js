@@ -16,7 +16,7 @@ describe('Add Job Test', () => {
         // Verify that login is successful
         cy.url("eq", "https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index").should('include', '/dashboard');
 
-        cy.contains("Admin").click()
+        cy .contains("Admin").click()
 
         //verify the jobtittle 
  

@@ -11,11 +11,13 @@
   "dependencies": {
     "cypress": "^12.10.0",
     "cypress-downloadfile": "^1.2.3",
-    "upload-file": "^1.2.0"
+    "upload-file": "^1.0.0"
   },
   "devDependencies": {
+    "@4tw/cypress-drag-drop": "^2.2.4",
     "@cypress/xpath": "^2.0.3",
-    "cypress-cucumber-preprocessor": "^4.3.1",
+    "@shelex/cypress-allure-plugin": "^2.39.1",
+    "cypress-cucumber-preprocessor": "^1.7.0",
     "cypress-file-upload": "^5.0.8",
     "cypress-mochawesome-reporter": "^3.5.0"
   },

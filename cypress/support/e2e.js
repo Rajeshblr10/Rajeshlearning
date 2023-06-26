@@ -14,7 +14,7 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
+//import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
@@ -22,3 +22,5 @@ import './commands'
 require('@cypress/xpath');
 
 import 'cypress-mochawesome-reporter/register';
+require('@4tw/cypress-drag-drop')
+//import '@shelex/cypress-allure-plugin';
